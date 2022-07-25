@@ -3,7 +3,7 @@ const { useState, useEffect } = require("react")
 const useProducts = () =>{
     const [products,setProducts] = useState([]);
     useEffect(() =>{
-        fetch('products.json')
+        fetch('http://localhost:4000/product')
         .then(res => res.json())
         .then(data => setProducts(data));
 
